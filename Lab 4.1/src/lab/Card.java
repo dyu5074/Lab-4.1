@@ -1,10 +1,10 @@
+package lab;
 
-public abstract class Card {
+public class Card {
 	private String rank;
 	private String suit;
 	private int pointValue;
-	
-	public void CardClass(String rank, String suit, int pointvalue)
+	public Card(String rank, String suit, int pointvalue)
 	{
 		this.rank = rank;
 		this.suit = suit; 

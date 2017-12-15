@@ -1,3 +1,4 @@
+package lab;
 import java.util.ArrayList;
 public class Deck {
 	private ArrayList<Card> unDealt;
@@ -17,11 +18,18 @@ public class Deck {
 	}
 	public boolean isEmpty()
 	{
-		if(unDealt.size() == 0)
-		{
-			return true;
-		}
-		return false;
+		return unDealt.size()==0;
 	}
-	
+	public int size ()
+	{
+		return unDealt.size();
+	}
+	public Card deal()
+	{
+		
+	}
+	public void shuffle()
+	{
+
+	}
 }
