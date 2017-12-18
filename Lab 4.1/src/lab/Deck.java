@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class Deck {
 	private ArrayList<Card> unDealt;
 	private ArrayList<Card> Dealt;
-	public void DeckCreator(String[] rank, String[] suit, int[] pointvalue) {
+	public void Deck(String[] rank, String[] suit, int[] pointvalue) 
+	{
 		for (int i = 0 ; i < rank.length;i++)
 		{
 			for (int j = 0; j < suit.length;j++)
@@ -26,10 +27,23 @@ public class Deck {
 	}
 	public Card deal()
 	{
-		
+		Card i = unDealt.get((int)(Math.random()*unDealt.size()));
+		Dealt.add(i);
+		return i;
 	}
 	public void shuffle()
 	{
-
+		while(Dealt.size() > 0)		
+		{
+			 unDealt.add(Dealt.get(0));
+			 Dealt.remove(0);
+		}
+		for(int k = 51; k > 0; k++)
+		{
+			 int i = (int)(Math.random()*k);
+			 Card x = Dealt.get(k);
+			 Dealt.set(k,Dealt.get(i));
+			 Dealt.set(i,x);
+		}
 	}
 }
