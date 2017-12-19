@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Deck {
 	private ArrayList<Card> unDealt;
 	private ArrayList<Card> Dealt;
-	public void Deck(String[] rank, String[] suit, int[] pointvalue) 
+	public Deck(String[] rank, String[] suit, int[] pointvalue) 
 	{
 		for (int i = 0 ; i < rank.length;i++)
 		{
